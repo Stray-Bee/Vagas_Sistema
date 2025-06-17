@@ -1,12 +1,12 @@
 /* --- Configurações Globais e Variáveis --- */
 :root {
-    --primary-color: #E63946;
-    --secondary-color: #F1FAEE;
-    --dark-color: #1D3557;
-    --light-color: #A8DADC;
-    --background-color: #FFFFFF;
-    --text-color: #4A4A4A;
-    --border-color: #ddd;
+    --primary-color: #6A0DAD;         /* Roxo */
+    --secondary-color: #FFD700;       /* Dourado */
+    --dark-color: #4B0082;            /* Roxo escuro */
+    --light-color: #F8F8FF;           /* Branco suave */
+    --background-color: #FFFFFF;      /* Branco */
+    --text-color: #2C2C2C;            /* Texto escuro */
+    --border-color: #E0E0E0;
     --font-family: 'Poppins', sans-serif;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #d0333f;
+    background-color: #5900b3;
     transform: translateY(-2px);
 }
 
@@ -62,12 +62,11 @@ body {
     color: white;
 }
 
-
 /* --- Cabeçalho e Navegação --- */
 .main-header {
     background-color: var(--background-color);
     padding: 20px 0;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 2px solid var(--secondary-color);
 }
 
 .main-nav {
@@ -137,7 +136,7 @@ body {
 
 .hero-content h1 {
     font-size: 48px;
-    color: var(--dark-color);
+    color: var(--primary-color);
     line-height: 1.2;
     margin-bottom: 20px;
 }
@@ -160,9 +159,9 @@ body {
 
 /* --- Seção de Busca --- */
 .search-section {
-    background-color: #f7f9fc;
+    background-color: var(--light-color);
     padding: 40px 0;
-    margin-top: -50px; /* Sobrepõe um pouco a seção hero */
+    margin-top: -50px;
     position: relative;
     z-index: 10;
 }
@@ -172,7 +171,7 @@ body {
     background: white;
     border-radius: 12px;
     padding: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(106, 13, 173, 0.1);
 }
 
 .search-form input {
@@ -208,7 +207,7 @@ body {
 }
 
 .job-card:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 30px rgba(106, 13, 173, 0.1);
     transform: translateY(-5px);
 }
 
@@ -221,17 +220,17 @@ body {
 
 .job-title {
     font-size: 22px;
-    color: var(--dark-color);
+    color: var(--primary-color);
     margin-right: 15px;
 }
 
 .job-category {
-    background-color: var(--light-color);
-    color: var(--dark-color);
+    background-color: var(--secondary-color);
+    color: white;
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 600;
     flex-shrink: 0;
 }
 
@@ -273,18 +272,18 @@ body {
     .hero-content {
         order: 2;
     }
-    
+
     .hero-image {
         order: 1;
         margin-bottom: 30px;
     }
-    
+
     .hero-buttons {
         justify-content: center;
     }
 
     .nav-links {
-        display: none; /* Em um projeto real, aqui entraria um menu hamburguer */
+        display: none;
     }
 }
 
@@ -292,12 +291,12 @@ body {
     .hero-content h1 {
         font-size: 36px;
     }
-    
+
     .search-form {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .job-card-header, .job-card-footer {
         flex-direction: column;
         align-items: flex-start;
