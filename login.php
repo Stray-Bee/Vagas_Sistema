@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     } else {
         // Mensagem de erro traduzida para o espanhol
-        $error = "Credenciales inválidas. Por favor, inténtalo de nuevo.";
+        $error = "Credenciais inválidas. Por favor, tente novamente.";
     }
 }
 ?>
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
+    <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -145,8 +145,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="image-section">
             </div>
         <div class="form-section">
-            <p class="subtitle">¡Bienvenido!</p>
-            <h2>Inicia Sesión</h2>
+            <p class="subtitle">¡BemVindo!</p>
+            <h2>login</h2>
             
             <?php if (isset($error)): ?>
                 <div class='alert alert-danger'><?php echo $error; ?></div>
@@ -164,7 +164,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <button type="submit" class="btn btn-primary btn-custom">Ingresar</button>
             </form>
             <div class="register-link">
-                <p>¿No tienes una cuenta? <a href="register.php">Regístrate</a></p>
+                <p>Não tem uma conta? <a href="register.php">Regístrese</a></p>
             </div>
         </div>
     </div>

@@ -139,7 +139,7 @@ $jobs = $pdo->query("SELECT j.*, c.name as category_name FROM jobs j JOIN catego
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="#">Panel de Admin</a>
+            <a class="navbar-brand" href="#">Painel do Admin</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -158,42 +158,42 @@ $jobs = $pdo->query("SELECT j.*, c.name as category_name FROM jobs j JOIN catego
 
     <div class="container my-5">
         <div class="page-header">
-            <h2>Para Empresas</h2>
-            <p>¡Con solo unos simples pasos, encontrará a los candidatos ideales que busca!</p>
+            <h2>Pra Empresas</h2>
+            <p>Com apenas alguns passos simples, você encontrará os candidatos ideais que procura!</p>
         </div>
 
         <div class="steps-container">
             <div class="step">
                 <div class="step-number">1</div>
-                <h4>Cree la Vacante</h4>
-                <p>Cree su cuenta ahora y tenga acceso a las mejores oportunidades del mercado.</p>
+                <h4>Crie a Vacante</h4>
+                <p>Cadastre-se agora e descubra as melhores oportunidades profissionais.</p>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
-                <h4>Administre las Vacantes</h4>
-                <p>Encuentre profesionales calificados y elija el talento ideal para su empresa.</p>
+                <h4>Administre as Vacantes</h4>
+                <p>Descubra profissionais altamente capacitados e selecione o melhor talento para sua equipe.</p>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
-                <h4>Encuentre al Candidato</h4>
-                <p>Utilice nuestros filtros avanzados para conectarse con el profesional perfecto para su vacante.</p>
+                <h4>Encontre o Candidato Ideal</h4>
+                <p>Use nossos filtros avançados e encontre o profissional perfeito para sua oportunidade.</p>
             </div>
         </div>
 
         <div class="section-box">
-            <h3>Crear Nueva Vacante</h3>
+            <h3>Criar Nova Vacante</h3>
             <form method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
-                    <label for="title" class="form-label">Título de la Vacante</label>
+                    <label for="title" class="form-label">Título da Vacante</label>
                     <input type="text" class="form-control" id="title" name="title" required>
                 </div>
                 <div class="mb-3">
-                    <label for="description" class="form-label">Descripción Completa</label>
+                    <label for="description" class="form-label">Descrição Completa</label>
                     <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
                 </div>
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="contact" class="form-label">Contacto (E-mail o Teléfono)</label>
+                        <label for="contact" class="form-label">Contato (E-mail o Telefone)</label>
                         <input type="text" class="form-control" id="contact" name="contact" required>
                     </div>
                     <div class="col-md-6 mb-3">
@@ -209,7 +209,7 @@ $jobs = $pdo->query("SELECT j.*, c.name as category_name FROM jobs j JOIN catego
                     <label for="image" class="form-label">Imagen (Opcional)</label>
                     <input type="file" class="form-control" id="image" name="image" accept="image/*">
                 </div>
-                <button type="submit" name="add" class="btn btn-primary px-4">Crear Vacante</button>
+                <button type="submit" name="add" class="btn btn-primary px-4">Criar Vacante</button>
             </form>
         </div>
         
@@ -222,7 +222,7 @@ $jobs = $pdo->query("SELECT j.*, c.name as category_name FROM jobs j JOIN catego
                             <th>Título</th>
                             <th>Categoría</th>
                             <th class="text-center">Estado</th>
-                            <th class="text-center">Acciones</th>
+                            <th class="text-center">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -232,9 +232,9 @@ $jobs = $pdo->query("SELECT j.*, c.name as category_name FROM jobs j JOIN catego
                                 <td><?php echo htmlspecialchars($job['category_name']); ?></td>
                                 <td class="text-center">
                                     <?php if ($job['is_active']): ?>
-                                        <span class="badge bg-success">Activa</span>
+                                        <span class="badge bg-success">Ativa</span>
                                     <?php else: ?>
-                                        <span class="badge bg-secondary">Inactiva</span>
+                                        <span class="badge bg-secondary">Inativa</span>
                                     <?php endif; ?>
                                 </td>
                                 <td class="text-center">
@@ -245,7 +245,7 @@ $jobs = $pdo->query("SELECT j.*, c.name as category_name FROM jobs j JOIN catego
                                             <?php echo $job['is_active'] ? 'Desactivar' : 'Activar'; ?>
                                         </button>
                                     </form>
-                                    <a href="view_applications.php?job_id=<?php echo htmlspecialchars($job['id']); ?>" class="btn btn-sm btn-info">Ver Postulantes</a>
+                                    <a href="view_applications.php?job_id=<?php echo htmlspecialchars($job['id']); ?>" class="btn btn-sm btn-info">Visualizar Candidatos</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

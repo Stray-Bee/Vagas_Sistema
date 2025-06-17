@@ -1,15 +1,20 @@
-/* --- Configurações Globais e Variáveis --- */
+/* --- Nuevas Variables CSS (Paleta profesional + degradados) --- */
 :root {
-    --primary-color: #E63946;
-    --secondary-color: #F1FAEE;
-    --dark-color: #1D3557;
-    --light-color: #A8DADC;
-    --background-color: #FFFFFF;
-    --text-color: #4A4A4A;
-    --border-color: #ddd;
-    --font-family: 'Poppins', sans-serif;
+    --primary: #2563eb; /* Azul vibrante (antes rojo) */
+    --primary-dark: #1e40af;
+    --secondary: #f0f9ff; /* Fondo claro azulado */
+    --accent: #ec4899; /* Rosa para highlights */
+    --dark: #1e293b; /* Texto oscuro */
+    --light: #f8fafc; /* Fondo blanco suave */
+    --success: #10b981; /* Verde para acciones positivas */
+    --border: #e2e8f0; /* Bordes sutiles */
+    --font-main: 'Inter', sans-serif; /* Más moderna que Poppins */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+/* --- Reset Mejorado --- */
 * {
     margin: 0;
     padding: 0;
@@ -17,290 +22,193 @@
 }
 
 body {
-    font-family: var(--font-family);
-    background-color: var(--background-color);
-    color: var(--text-color);
+    font-family: var(--font-main);
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.5;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* --- Botões --- */
+/* --- Botones Rediseñados --- */
 .btn {
-    padding: 10px 24px;
-    border: 1px solid transparent;
+    padding: 12px 28px;
     border-radius: 8px;
-    font-weight: 500;
-    text-decoration: none;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-size: 16px;
+    border: none;
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
     color: white;
-    border-color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
-    background-color: #d0333f;
     transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    opacity: 0.9;
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    background: white;
+    color: var(--primary);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
-    background-color: var(--primary-color);
-    color: white;
+    background: var(--secondary);
+    border-color: var(--primary);
 }
 
-
-/* --- Cabeçalho e Navegação --- */
+/* --- Header Minimalista + Glassmorphism --- */
 .main-header {
-    background-color: var(--background-color);
-    padding: 20px 0;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.main-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo img {
-    height: 40px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: var(--shadow-sm);
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    position: relative;
-    padding-bottom: 5px;
+    color: var(--dark);
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s;
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
+    color: var(--primary);
+    background: var(--secondary);
 }
 
 .nav-links a.active {
-    color: var(--primary-color);
-    font-weight: 700;
+    color: var(--primary);
+    font-weight: 600;
 }
 
 .nav-links a.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--primary-color);
+    display: none; /* Simplificamos el estilo */
 }
 
-.nav-actions {
-    display: flex;
-    gap: 15px;
-}
-
-/* --- Seção Hero --- */
+/* --- Hero Section con Gradiente Sutil --- */
 .hero-section {
-    padding: 80px 0;
-    background-color: var(--background-color);
-}
-
-.hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.hero-content {
-    max-width: 500px;
+    background: linear-gradient(135deg, var(--light) 0%, var(--secondary) 100%);
+    padding: 100px 0;
 }
 
 .hero-content h1 {
-    font-size: 48px;
-    color: var(--dark-color);
+    font-size: 3.5rem;
+    background: linear-gradient(to right, var(--dark), var(--primary-dark));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 20px;
+    margin-bottom: 24px;
 }
 
 .hero-image img {
-    max-width: 100%;
-    height: auto;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
 }
 
-/* --- Seção de Busca --- */
-.search-section {
-    background-color: #f7f9fc;
-    padding: 40px 0;
-    margin-top: -50px; /* Sobrepõe um pouco a seção hero */
-    position: relative;
-    z-index: 10;
-}
-
-.search-form {
-    display: flex;
+/* --- Job Cards con Efecto 3D --- */
+.job-card {
     background: white;
     border-radius: 12px;
-    padding: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 28px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.job-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.job-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary), var(--accent));
+    transition: width 0.3s;
+}
+
+.job-card:hover::before {
+    width: 6px;
+}
+
+.job-category {
+    background: var(--secondary);
+    color: var(--primary-dark);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* --- Search Section Flotante --- */
+.search-section {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--shadow-lg);
+    margin-top: -40px;
+    position: relative;
+    z-index: 20;
 }
 
 .search-form input {
     flex-grow: 1;
-    border: none;
-    padding: 10px 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 20px;
     font-size: 16px;
-    outline: none;
+    transition: all 0.3s;
 }
 
-.search-form button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.search-form input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
-/* --- Seção de Vagas --- */
-.jobs-section {
-    padding: 80px 0;
-}
-
-.job-listings {
-    display: grid;
-    gap: 30px;
-}
-
-.job-card {
-    background-color: white;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 25px;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.job-card:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
-}
-
-.job-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 15px;
-}
-
-.job-title {
-    font-size: 22px;
-    color: var(--dark-color);
-    margin-right: 15px;
-}
-
-.job-category {
-    background-color: var(--light-color);
-    color: var(--dark-color);
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-    flex-shrink: 0;
-}
-
-.job-description {
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.job-card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #f0f0f0;
-    padding-top: 20px;
-}
-
-.job-contact {
-    font-size: 14px;
-}
-
-.no-jobs-found, .login-prompt {
-    text-align: center;
-    padding: 40px;
-    font-size: 18px;
-    color: #777;
-}
-
-.login-prompt .btn {
-    margin-top: 20px;
-}
-
-/* --- Responsividade --- */
-@media (max-width: 992px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-content {
-        order: 2;
-    }
-    
-    .hero-image {
-        order: 1;
-        margin-bottom: 30px;
-    }
-    
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .nav-links {
-        display: none; /* Em um projeto real, aqui entraria um menu hamburguer */
-    }
-}
-
+/* --- Responsive Mejorado --- */
 @media (max-width: 768px) {
     .hero-content h1 {
-        font-size: 36px;
+        font-size: 2.5rem;
     }
     
-    .search-form {
-        flex-direction: column;
-        gap: 10px;
+    .hero-container {
+        flex-direction: column-reverse;
     }
     
-    .job-card-header, .job-card-footer {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+    .nav-links {
+        gap: 16px;
     }
 }
+
+/* --- Efectos de Movimiento --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content, .hero-image, .job-card {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.job-card:nth-child(2) { animation-delay: 0.1s; }
+.job-card:nth-child(3) { animation-delay: 0.2s; }

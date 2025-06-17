@@ -70,7 +70,7 @@ if (isset($_POST['apply']) && isset($_SESSION['user_id'])) {
     <!-- Metadatos del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crie Oportunidades, Descubra Carreiras</title>
+    <title>Abra Portas, Encontre Sua Vocação</title>
 
     <!-- Estilos externos y tipografías -->
     <link rel="stylesheet" href="css/style.css">
@@ -148,8 +148,8 @@ if (isset($_POST['apply']) && isset($_SESSION['user_id'])) {
         <section class="hero-section">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <h1>Crear oportunidades,<br>Descubre carreras</h1>
-                    <p>Donde los objetivos y aspiraciones se consolidan cada mes, con trayectorias profesionales construidas día a día.</p>
+                    <h1>Abra Portas,<br>Encontre Sua Vocação</h1>
+                    <p>Um espaço onde aspirações ganham forma e trajetórias profissionais são traçadas com consistência</p>
                 </div>
             </div>
         </section>
@@ -169,7 +169,7 @@ if (isset($_POST['apply']) && isset($_SESSION['user_id'])) {
             <div class="container">
                 <div class="job-listings">
                     <?php if (empty($jobs)): ?>
-                        <p class="no-jobs-found">Nenhuma vaga encontrada. Tente uma busca diferente.</p>
+                        <p class="no-jobs-found">Nenhum resultado encontrado. Que tal tentar outra busca?.</p>
                     <?php else: ?>
                         <?php foreach ($jobs as $job): ?>
                             <div class="job-card">
@@ -216,7 +216,7 @@ if (isset($_POST['apply']) && isset($_SESSION['user_id'])) {
                 <!-- Mensagem para usuários não logados -->
                 <?php if (!isset($_SESSION['user_id'])): ?>
                     <div class="login-prompt">
-                        <a href="login.php" class="btn btn-primary">Inicia sesión para postularte</a>
+                        <a href="login.php" class="btn btn-primary">Inicia sesión para se candidatar</a>
                     </div>
                 <?php endif; ?>
             </div>

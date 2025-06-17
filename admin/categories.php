@@ -101,18 +101,18 @@ $categories = $pdo->query("SELECT * FROM categories ORDER BY name ASC")->fetchAl
     <div class="container my-5">
 
         <div class="page-header">
-            <h2>Administración de Categorías</h2>
-            <p>Añada, edite o elimine las categorías que se usarán para clasificar las vacantes de empleo.</p>
+            <h2>Gestão de Categorias</h2>
+            <p>Adicione, edite ou exclua as categorias que serão usadas para classificar as vagas de emprego.</p>
         </div>
 
         <div class="section-box">
-            <h3>Añadir Nueva Categoría</h3>
+            <h3>Add Nova Categoría</h3>
             <form method="POST">
                 <div class="mb-3">
-                    <label for="name" class="form-label">Nombre de la Categoría</label>
+                    <label for="name" class="form-label">Nome da Categoría</label>
                     <input type="text" class="form-control" id="name" name="name" required placeholder="Ej: Tecnología, Ventas, Diseño">
                 </div>
-                <button type="submit" name="add" class="btn btn-primary"><i class="fas fa-plus"></i> Añadir Categoría</button>
+                <button type="submit" name="add" class="btn btn-primary"><i class="fas fa-plus"></i> Add Categoría</button>
             </form>
         </div>
 
@@ -123,7 +123,7 @@ $categories = $pdo->query("SELECT * FROM categories ORDER BY name ASC")->fetchAl
                     <thead class="table-light">
                         <tr>
                             <th scope="col" style="width: 10%;">ID</th>
-                            <th scope="col">Nombre</th>
+                            <th scope="col">Nome</th>
                             <th scope="col" class="text-center" style="width: 45%;">Acciones</th>
                         </tr>
                     </thead>
@@ -138,7 +138,7 @@ $categories = $pdo->query("SELECT * FROM categories ORDER BY name ASC")->fetchAl
                                             <input type="hidden" name="id" value="<?php echo htmlspecialchars($category['id']); ?>">
                                             <div class="input-group">
                                                 <input type="text" class="form-control form-control-sm" name="name" value="<?php echo htmlspecialchars($category['name']); ?>" required>
-                                                <button type="submit" name="edit" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i> Actualizar</button>
+                                                <button type="submit" name="edit" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i> Atualizar</button>
                                             </div>
                                         </form>
                                         <form method="POST" class="d-inline-block">
