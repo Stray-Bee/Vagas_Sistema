@@ -152,34 +152,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="image-section">
         </div>
         <div class="form-section">
-            <p class="subtitle">Comienza Ahora</p>
-            <h2>Crea tu Cuenta</h2>
+            <p class="subtitle">Comece Agora</p>
+            <h2>Crie sua conta</h2>
             
             <form method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="name" class="form-label">Nombre Completo</label>
-                    <input type="text" class="form-control" id="name" name="name" required placeholder="Tu nombre completo">
+                    <input type="text" class="form-control" id="name" name="name" required placeholder="Nome completo">
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" name="email" required placeholder="tu@email.com">
+                    <input type="email" class="form-control" id="email" name="email" required placeholder="Email">
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" name="password" required placeholder="Crea una contraseña segura">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="password" name="password" required placeholder="Criar senha">
                 </div>
                 <div class="mb-3">
-                    <label for="linkedin" class="form-label">Perfil de LinkedIn (Opcional)</label>
+                    <label for="linkedin" class="form-label">Perfil do LinkedIn (Opcional)</label>
                     <input type="url" class="form-control" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/tu-perfil">
                 </div>
                  <div class="mb-3">
                     <label for="photo" class="form-label">Foto de Perfil (Opcional)</label>
                     <input type="file" class="form-control" id="photo" name="photo" accept="image/*">
                 </div>
-                <button type="submit" class="btn btn-primary btn-custom">Crear Perfil</button>
+                <button type="submit" class="btn btn-primary btn-custom">Criar Perfil</button>
             </form>
             <div class="login-link">
-                <p>¿Ya tienes una cuenta? <a href="login.php">Inicia sesión</a></p>
+                <p>Já possui conta? <a href="login.php">Faça login</a></p>
             </div>
         </div>
     </div>
