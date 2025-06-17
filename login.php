@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     .image-section {
         flex-basis: 50%;
-        background: url('https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+        background: url('https://blog.gebesa.com/hubfs/Blog%20Gebesa/Im%C3%A1genes%20del%20Blog/escritorio-de-altura-ajustable-para-todos.jpg') no-repeat center center;
         background-size: cover;
     }
 
