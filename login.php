@@ -163,8 +163,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="image-section">
             </div>
         <div class="form-section">
-            <p class="subtitle">¡Bienvenido!</p>
-            <h2>Inicia Sesión</h2>
+            <p class="subtitle">Seja Bem-Vindo</p>
+            <h2>Iniciar seção</h2>
             
             <?php if (isset($error)): ?>
                 <div class='alert alert-danger'><?php echo $error; ?></div>
@@ -172,17 +172,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <form method="POST">
                 <div class="mb-3">
-                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <label for="email" class="form-label">Endereço de email</label>
                     <input type="email" class="form-control" id="email" name="email" required placeholder="Ingresa tu correo electrónico">
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña</label>
+                    <label for="password" class="form-label">Senha</label>
                     <input type="password" class="form-control" id="password" name="password" required placeholder="Ingresa tu contraseña">
                 </div>
-                <button type="submit" class="btn btn-primary btn-custom">Ingresar</button>
+                <button type="submit" class="btn btn-primary btn-custom">Login</button>
             </form>
             <div class="register-link">
-                <p>¿No tienes una cuenta? <a href="register.php">Regístrate</a></p>
+                <p>Não possuí uma conta? <a href="register.php">Faça seu registro</a></p>
             </div>
         </div>
     </div>

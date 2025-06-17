@@ -168,8 +168,8 @@ if (isset($_POST['apply']) && isset($_SESSION['user_id'])) {
                         <div class="user-greeting">Olá, <?php echo htmlspecialchars(explode(' ', $user['name'])[0]); ?></div>
                         <a href="logout.php" class="btn btn-secondary">Sair</a>
                     <?php else: ?>
-                        <a href="register.php" class="btn btn-secondary">Registrarse</a>
-                        <a href="login.php" class="btn btn-primary">Iniciar sesión</a>
+                        <a href="register.php" class="btn btn-secondary">Registro</a>
+                        <a href="login.php" class="btn btn-primary">Login</a>
                     <?php endif; ?>
                 </div>
             </nav>
@@ -183,8 +183,8 @@ if (isset($_POST['apply']) && isset($_SESSION['user_id'])) {
         <section class="hero-section">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <h1>Crear oportunidades,<br>Descubre carreras</h1>
-                    <p>Donde los objetivos y aspiraciones se consolidan cada mes, con trayectorias profesionales construidas día a día.</p>
+                    <h1>Crie e descubra oportunidades,<br>encontre sua carreira</h1>
+                    <p>Seu futuro começa com um clique. Encontre a vaga perfeita para você e transforme sua carreira!</p>
                 </div>
             </div>
         </section>
@@ -204,7 +204,7 @@ if (isset($_POST['apply']) && isset($_SESSION['user_id'])) {
             <div class="container">
                 <div class="job-listings">
                     <?php if (empty($jobs)): ?>
-                        <p class="no-jobs-found">Nenhuma vaga encontrada. Tente uma busca diferente.</p>
+                        <p class="no-jobs-found">Nenhuma vaga encontrada. Busque novamente.</p>
                     <?php else: ?>
                         <?php foreach ($jobs as $job): ?>
                             <div class="job-card">
@@ -251,7 +251,7 @@ if (isset($_POST['apply']) && isset($_SESSION['user_id'])) {
                 <!-- Mensagem para usuários não logados -->
                 <?php if (!isset($_SESSION['user_id'])): ?>
                     <div class="login-prompt">
-                        <a href="login.php" class="btn btn-primary">Inicia sesión para postularte</a>
+                        <a href="login.php" class="btn btn-primary">Faça login para inscrever-se</a>
                     </div>
                 <?php endif; ?>
             </div>
