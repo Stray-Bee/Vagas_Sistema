@@ -70,7 +70,7 @@ if (isset($_POST['apply']) && isset($_SESSION['user_id'])) {
     <!-- Metadatos del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crie Oportunidades, Descubra Carreiras</title>
+    <title>Crie oportunidades e descubra carreiras promissoras</title>
 
     <!-- Estilos externos y tipografías -->
     <link rel="stylesheet" href="css/style.css">
@@ -80,38 +80,73 @@ if (isset($_POST['apply']) && isset($_SESSION['user_id'])) {
 
     <!-- Estilos internos personalizados -->
     <style>
-        .nav-actions { display: flex; align-items: center; gap: 15px; }
-        .user-greeting { font-weight: 500; color: #333; }
-        .nav-links li a { padding: 10px 15px; }
-        .btn-success:disabled {
-            background-color: #198754;
-            border-color: #198754;
-            opacity: 0.7;
-        }
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
 
-        /* Estilo para tarjetas de vacantes con imagen */
-        .job-card {
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-        }
-        .job-card-image {
-            flex-shrink: 0;
-            width: 80px;
-            height: 80px;
-            border-radius: 8px;
-            overflow: hidden;
-            background-color: #f0f0f0;
-        }
-        .job-card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .job-card-content {
-            flex-grow: 1;
-        }
-    </style>
+    .user-greeting {
+        font-weight: 500;
+        color: #B8860B; /* Dourado escuro */
+    }
+
+    .nav-links li a {
+        padding: 10px 15px;
+        color: #6A0DAD; /* Roxo */
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .nav-links li a:hover {
+        background-color: #EDE3F5; /* Fundo roxo claro */
+        border-radius: 6px;
+    }
+
+    .btn-success:disabled {
+        background-color: #6A0DAD; /* Roxo */
+        border-color: #6A0DAD;
+        opacity: 0.7;
+        color: #FFFFFF;
+    }
+
+    /* Estilo para tarjetas de vacantes con imagen */
+    .job-card {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        background-color: #FFFFFF; /* Branco */
+        border: 1px solid #E0CCFF; /* Roxo claro */
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(106, 13, 173, 0.1); /* leve sombra roxa */
+        transition: box-shadow 0.3s ease;
+    }
+
+    .job-card:hover {
+        box-shadow: 0 8px 25px rgba(106, 13, 173, 0.2);
+    }
+
+    .job-card-image {
+        flex-shrink: 0;
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #F5F5F5; /* fundo neutro claro */
+    }
+
+    .job-card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .job-card-content {
+        flex-grow: 1;
+        color: #333;
+    }
+</style>
 </head>
 <body>
 
